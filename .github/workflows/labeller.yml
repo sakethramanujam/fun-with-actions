@@ -12,6 +12,6 @@ jobs:
         fetch-depth: 1
     - name: Labeler
       uses: docker://decathlon/pull-request-labeler-action:2.0.0
-      with:
+      env:
         GITHUB_TOKEN: "${{ secrets.TOKEN }}"
         CONFIG_PATH: config.yml

@@ -1,2 +1,3 @@
 # !/usr/bin/bash
-pytest --cov=lib tests "$@"
+pytest --cov=lib ./tests "$@"
+1

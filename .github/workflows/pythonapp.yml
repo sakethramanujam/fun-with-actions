@@ -19,4 +19,4 @@ jobs:
         pip install -r ./python/requirements.txt
     - name: Test with pytest
       run: |
-        pytest tests "$@"
+        pytest ./python/tests "$@"

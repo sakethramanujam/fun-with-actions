@@ -1,9 +1,10 @@
-name: Python application
+name: Python application 2
 
 on: 
   push:
     paths:
-    - 'python/**'
+    - 'python_2/**'
+    
 
 jobs:
   test:
@@ -17,8 +18,8 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r ./python/requirements.txt
+        pip install -r ./python_2/requirements.txt
     - name: Test with pytest
       run: |
-        chmod +x ./python/test.sh
-        ./python/test.sh
+        chmod +x ./python_2/test.sh
+        ./python_2/test.sh

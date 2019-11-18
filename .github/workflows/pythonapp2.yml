@@ -1,9 +1,10 @@
-name: Python application
+name: Python application 2
 
 on: 
   push:
     paths:
-    - 'python_2/*'
+    - 'python_2/**'
+    
 
 jobs:
   build:

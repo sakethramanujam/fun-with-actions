@@ -1,0 +1,14 @@
+name: SSH Tester
+on: [push, pull_request]
+
+jobs:
+  tester:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: SSH into machine
+        env:
+          PRIVATE_KEY: "${{ secrets.PRIVATE_KEY }}"
+        run: |
+          echo "$PRIVATE_KEY" > /tmp/ssh-key
+          chmod 400 /tmp/ssh-key
+          ssh -i /tmp/ssh-key -o StrictHostKeyChecking=no saketh@anand.do.rorodata.net ls

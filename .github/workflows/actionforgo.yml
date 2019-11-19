@@ -25,4 +25,5 @@ jobs:
     - name: Run api Tests
       working-directory: go/
       run: |
+        chmod +x ./runtests.sh
         ./runtests.sh

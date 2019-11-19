@@ -22,8 +22,12 @@ jobs:
       run: |
         go mod download
         go mod verify
+    - name: Build
+      working-directory: go/
+      run: |
+        go build func/fib.go
+        ./fib
     - name: Run api Tests
       working-directory: go/
       run: |
-        chmod +x ./runtests.sh
         ./runtests.sh

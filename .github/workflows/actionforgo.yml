@@ -25,7 +25,7 @@ jobs:
     - name: Build
       working-directory: go/
       run: |
-        go build func/fib.go
+        go build ./func/fib.go
         ./fib
     - name: Run api Tests
       working-directory: go/

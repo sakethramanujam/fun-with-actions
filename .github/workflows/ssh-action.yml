@@ -10,4 +10,4 @@ jobs:
           PRIVATE_KEY: "${{ secrets.PRIVATE_KEY }}"
         run: |
           echo "$PRIVATE_KEY" > /tmp/ssh-key
-          ssh -i /tmp/ssh-key saketh@anand.do.rorodata.net ls
+          ssh -i /tmp/ssh-key -o StrictHostKeyChecking=no saketh@anand.do.rorodata.net ls
